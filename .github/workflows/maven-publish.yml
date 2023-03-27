@@ -33,4 +33,4 @@ jobs:
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       working-directory: ./demo-time
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ secrets.PAT }}
