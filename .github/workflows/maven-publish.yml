@@ -5,7 +5,9 @@ name: Maven Package
 
 on:
   release:
-    types: [created]
+    types: [published]
+  push:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -22,12 +24,16 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        server-id: github
 
     - name: Build with Maven
       working-directory: ./demo-time
       run: mvn -B package --file pom.xml
 
+    - name: Print value
+      run: |
+        echo "PAT is  ${{ secrets.PAT }}"
+          
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy
       working-directory: ./demo-time
