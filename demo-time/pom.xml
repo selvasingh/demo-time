@@ -5,7 +5,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>demo-time</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <packaging>jar</packaging>
 
     <name>demo-time</name>
@@ -42,7 +42,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/asaikali/demo-time</url>
+            <url>https://maven.pkg.github.com/dingmeng-xue/demo-time</url>
         </repository>
     </distributionManagement>
 
